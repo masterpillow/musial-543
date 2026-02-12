@@ -1,18 +1,23 @@
+import Intro from "../components/intro";
+
 export default function Home() {
   return (
-    <main className="min-h-screen p-8">
-      <h1>CSC 543 Assignment</h1>
+    <main className="rounded-lg bg-green-600 p-6 text-white text-center">
+      <h2 className="text-2xl font-bold">&lt;main&gt;</h2>
 
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua.
-      </p>
+      <section className="mt-6 rounded-lg bg-yellow-600 p-6">
+        <h3 className="text-xl font-semibold">&lt;section&gt;</h3>
+        <div className="mt-4">
+          <Intro />
+        </div>
+      </section>
 
-      <ul>
-        <li>Lorem ipsum dolor sit amet</li>
-        <li>Consectetur adipiscing elit</li>
-        <li>Sed do eiusmod tempor</li>
-      </ul>
+      <section className="mt-6 rounded-lg bg-yellow-600 p-6">
+        <h3 className="text-xl font-semibold">&lt;section&gt;</h3>
+        <div className="mt-4">
+          <Intro />
+        </div>
+      </section>
     </main>
   );
 }
