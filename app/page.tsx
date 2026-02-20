@@ -1,5 +1,5 @@
 import Intro from "../components/intro";
-
+import AccordionUI from "../Layout/ui/accordion";
 export default function Home() {
   return (
     <main className="rounded-lg bg-green-600 p-6 text-white text-center">
@@ -9,6 +9,7 @@ export default function Home() {
         <h3 className="text-xl font-semibold">&lt;section&gt;</h3>
         <div className="mt-4">
           <Intro />
+          <AccordionUI />
         </div>
       </section>
 
@@ -16,6 +17,7 @@ export default function Home() {
         <h3 className="text-xl font-semibold">&lt;section&gt;</h3>
         <div className="mt-4">
           <Intro />
+          <AccordionUI />
         </div>
       </section>
     </main>
