@@ -8,7 +8,15 @@ import { HiOutlineStar } from "react-icons/hi";
 const navLinks = [
   { href: "/", label: "Home" },
   { href: "/about", label: "About" },
+  { href: "/posts", label: "Posts" },
 ];
+
+function linkIsActive(pathname: string, href: string) {
+  if (href === "/") {
+    return pathname === "/";
+  }
+  return pathname === href || pathname.startsWith(`${href}/`);
+}
 
 export default function Header() {
   const pathname = usePathname();
@@ -26,7 +34,7 @@ export default function Header() {
               key={link.href}
               href={link.href}
               className={`text-sm font-medium transition-colors hover:text-amber-400 ${
-                pathname === link.href ? "text-amber-400" : ""
+                linkIsActive(pathname, link.href) ? "text-amber-400" : ""
               }`}
             >
               {link.label}
